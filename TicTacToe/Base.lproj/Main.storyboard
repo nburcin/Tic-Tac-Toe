@@ -13,25 +13,47 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="TicTacToe" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board" translatesAutoresizingMaskIntoConstraints="NO" id="0ij-FW-3RA">
-                                <rect key="frame" x="0.0" y="90" width="414" height="646"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noughts Has Won!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkb-2Z-I8x">
-                                <rect key="frame" x="62.333333333333343" y="346" width="289.33333333333326" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>
-                                <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-dQ-jKD">
-                                <rect key="frame" x="0.0" y="20" width="414" height="70"/>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fVO-fE-L5V">
+                                <rect key="frame" x="16" y="110" width="382" height="606"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noughts Has Won!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkb-2Z-I8x">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="92"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                        <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board" translatesAutoresizingMaskIntoConstraints="NO" id="1rf-O0-VTJ">
+                                        <rect key="frame" x="0.0" y="112" width="382" height="382"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1rf-O0-VTJ" secondAttribute="height" multiplier="1:1" id="3Oh-jc-zr3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARm-Fm-7Vx">
+                                        <rect key="frame" x="0.0" y="514" width="382" height="92"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                        <state key="normal" title="Play Again!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playAgainButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UxO-Kv-Mqy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ARm-Fm-7Vx" firstAttribute="height" secondItem="dkb-2Z-I8x" secondAttribute="height" id="cES-SJ-loB"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-dQ-jKD" customClass="GradientView" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic-Tac-Toe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z19-sh-m6U">
-                                        <rect key="frame" x="97" y="4.6666666666666679" width="220" height="60.666666666666657"/>
+                                        <rect key="frame" x="97" y="25.000000000000004" width="220" height="60.333333333333343"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="44"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -39,37 +61,30 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="37g-tI-Ffj"/>
                                     <constraint firstItem="z19-sh-m6U" firstAttribute="centerX" secondItem="6Oc-dQ-jKD" secondAttribute="centerX" id="KRV-Gc-vEJ"/>
-                                    <constraint firstAttribute="height" constant="70" id="OrN-nN-x8B"/>
-                                    <constraint firstItem="z19-sh-m6U" firstAttribute="centerY" secondItem="6Oc-dQ-jKD" secondAttribute="centerY" id="ohB-wQ-3nc"/>
+                                    <constraint firstItem="z19-sh-m6U" firstAttribute="centerY" secondItem="6Oc-dQ-jKD" secondAttribute="centerY" constant="10" id="ohB-wQ-3nc"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARm-Fm-7Vx">
-                                <rect key="frame" x="62.333333333333343" y="398" width="289.33333333333326" height="40"/>
-                                <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="Play Again!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ARm-Fm-7Vx" firstAttribute="width" secondItem="dkb-2Z-I8x" secondAttribute="width" id="9pH-RN-uZC"/>
-                            <constraint firstItem="6Oc-dQ-jKD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MAW-Aa-xZM"/>
-                            <constraint firstItem="dkb-2Z-I8x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NQt-eD-82N"/>
+                            <constraint firstItem="6Oc-dQ-jKD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0uS-qb-H1D"/>
+                            <constraint firstItem="fVO-fE-L5V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4Zx-NZ-zrW"/>
+                            <constraint firstItem="6Oc-dQ-jKD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qym-A5-OyB"/>
                             <constraint firstItem="6Oc-dQ-jKD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RCU-fz-Pex"/>
-                            <constraint firstItem="ARm-Fm-7Vx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="Urn-jC-4W6"/>
-                            <constraint firstItem="0ij-FW-3RA" firstAttribute="top" secondItem="6Oc-dQ-jKD" secondAttribute="bottom" id="Vzm-6W-QWl"/>
-                            <constraint firstItem="0ij-FW-3RA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xwi-xB-dSE"/>
-                            <constraint firstItem="dkb-2Z-I8x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z6l-4z-cVM"/>
-                            <constraint firstItem="0ij-FW-3RA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hpC-zr-elZ"/>
+                            <constraint firstItem="fVO-fE-L5V" firstAttribute="top" secondItem="6Oc-dQ-jKD" secondAttribute="bottom" constant="20" id="Syp-gR-uuU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fVO-fE-L5V" secondAttribute="bottom" constant="20" id="brn-Id-Bjn"/>
+                            <constraint firstItem="6Oc-dQ-jKD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hoV-pE-SqX"/>
                             <constraint firstItem="6Oc-dQ-jKD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kOR-Bf-w24"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ij-FW-3RA" secondAttribute="bottom" id="tT1-Qd-xdn"/>
-                            <constraint firstItem="ARm-Fm-7Vx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yUK-GG-yNH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fVO-fE-L5V" secondAttribute="trailing" constant="16" id="sWA-tx-I1Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playAgainButton" destination="ARm-Fm-7Vx" id="gnk-F5-nae"/>
+                        <outlet property="resultLabel" destination="dkb-2Z-I8x" id="5fz-zS-z8A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

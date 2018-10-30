@@ -12,6 +12,7 @@
 		0159533421888CB300E229EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0159533221888CB300E229EC /* Main.storyboard */; };
 		0159533621888CB300E229EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0159533521888CB300E229EC /* Assets.xcassets */; };
 		0159533921888CB300E229EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0159533721888CB300E229EC /* LaunchScreen.storyboard */; };
+		015953442188C3F900E229EC /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015953432188C3F900E229EC /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0159533521888CB300E229EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0159533821888CB300E229EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0159533A21888CB300E229EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		015953432188C3F900E229EC /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		0159532D21888CB200E229EC /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				015953422188C3B400E229EC /* Model */,
+				015953412188C3AB00E229EC /* View */,
+				015953402188C39900E229EC /* Controller */,
 				0159532E21888CB200E229EC /* AppDelegate.swift */,
-				0159533021888CB200E229EC /* ViewController.swift */,
 				0159533221888CB300E229EC /* Main.storyboard */,
 				0159533521888CB300E229EC /* Assets.xcassets */,
 				0159533721888CB300E229EC /* LaunchScreen.storyboard */,
 				0159533A21888CB300E229EC /* Info.plist */,
 			);
 			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		015953402188C39900E229EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0159533021888CB200E229EC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		015953412188C3AB00E229EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				015953432188C3F900E229EC /* GradientView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		015953422188C3B400E229EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			files = (
 				0159533121888CB200E229EC /* ViewController.swift in Sources */,
 				0159532F21888CB200E229EC /* AppDelegate.swift in Sources */,
+				015953442188C3F900E229EC /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
