@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         playAgainButton.layer.cornerRadius = 10.0
-        playAgainButton.isHidden = true
+        playAgainButton.isHidden = false
         playAgainButton.clipsToBounds = true
         resultLabel.layer.cornerRadius = 10.0
         resultLabel.isHidden = true
@@ -64,6 +64,23 @@ class ViewController: UIViewController {
                     })
                 }
             }
+//            for combination in winningCombinations {
+//
+//                if gameState[combination[0]] != 0 && gameState[combination[1]] != 0 && gameState[combination[2]] != 0 && (gameState[combination[0]] != gameState[combination[1]] || gameState[combination[0]] != gameState[combination[2]] || gameState[combination[1]] != gameState[combination[2]]){
+//
+//                    activeGame = false
+//                    resultLabel.isHidden = false
+//                    playAgainButton.isHidden = false
+//                    resultLabel.text = "No Winner!"
+//
+//                    UIView.animate(withDuration: 1, animations: {
+//
+//                        self.resultLabel.center = CGPoint(x: self.resultLabel.center.x + 500, y: self.resultLabel.center.y)
+//                        self.playAgainButton.center = CGPoint(x: self.playAgainButton.center.x + 500, y: self.playAgainButton.center.y)
+//                    })
+//                }
+//
+//            }
         }
     }
     
@@ -90,6 +107,8 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    
     
 }
 
